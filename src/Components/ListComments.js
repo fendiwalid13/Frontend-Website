@@ -13,7 +13,7 @@ const ListComments = ({movieId}) => {
     },[dispatch])
 
     const comments=useSelector(state=>state.CommentsReducer.comments)
-    const moviecomments= comments.filter((el,i,t)=>el.movieId?._id==movieId ||el.movieId==movieId)
+    const moviecomments= comments.filter((el,i,t)=>el.movieId?._id===movieId ||el.movieId===movieId)
 return (
   <div className="comments-wrapper">
     <h3 className="comments-title">

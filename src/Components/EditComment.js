@@ -11,8 +11,8 @@ const EditComment = ({el,date}) => {
     const dispatch=useDispatch()
     useEffect(()=>{
        dispatch(getOneComment(el._id))
-    },[])
-  // const onecomment=useSelector(state=>state.CommentsReducer.oneComment)
+    },[dispatch,el._id])
+
   const [comment,setComment]=useState(el.message)
   const [show, setShow] = useState(false);
 

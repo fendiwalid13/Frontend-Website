@@ -11,7 +11,7 @@ const EditMovie = () => {
     const dispatch=useDispatch()
     useEffect(()=>{
        dispatch(getOneMovie(id))
-    },[])
+    },[dispatch,id])
 
     const onemovie=useSelector(state=>state.MovieReducer.onemovie)
     const [title,setTitle]=useState(onemovie.title)

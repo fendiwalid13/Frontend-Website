@@ -1,12 +1,12 @@
 import "./MoviePage.css";
 import Rating from '@mui/material/Rating';
 import { useDispatch, useSelector } from "react-redux"
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { useNavigate, useParams } from "react-router-dom"
 import { deleteMovie, getOneMovie } from "../Redux/Actions/MovieActions";
 import AddComment from "./AddComment"
 import ListComments from "./ListComments"
-import { addRate, getOneRate, getRatesByMovie } from '../Redux/Actions/RateActions';
+import { addRate,  getRatesByMovie } from '../Redux/Actions/RateActions';
 import ListRates from './ListRates';
 
 
@@ -24,11 +24,11 @@ const MoviePage = () => {
     const user = useSelector(state => state.UserReducer.user)
     const myRate = rates.find(r => r.owner === user?._id)
 
-            const x = rates.filter((item,i,t)=> item.movieId._id == onemovie._id).reduce(
+            const x = rates.filter((item,i,t)=> item.movieId._id === onemovie._id).reduce(
   (accumulator, currentValue) => accumulator + currentValue.rate,
   0,
 )
-const xlength = rates.filter((item,i,t)=> item.movieId._id == onemovie._id)
+const xlength = rates.filter((item,i,t)=> item.movieId._id === onemovie._id)
 
 return (
   <div className="movie-page">
@@ -68,7 +68,7 @@ return (
 
 
         {
-          !rates.find((el,i,t)=> el.owner._id == user._id) &&
+          !rates.find((el,i,t)=> el.owner._id === user._id) &&
                 <div className="rating-section">
         <h3>Rate this movie</h3>
            <Rating

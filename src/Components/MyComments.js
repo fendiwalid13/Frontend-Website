@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import NavProfil from './NavProfil'
 import { useDispatch, useSelector } from 'react-redux'
 import MyCommentsCard from './MyCommentsCard'
 import { getCommentsByUser } from '../Redux/Actions/CommentsActions'
-import { useNavigate } from "react-router-dom"
 
 const MyComments = () => {
   const dispatch = useDispatch()
-  const navigate = useNavigate()
 
   useEffect(() => {
     dispatch(getCommentsByUser())
