@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { currentUser } from "../Redux/Actions/UserActions";
 import { useNavigate } from "react-router-dom";
 import DeleteProfil from "./DeleteProfil";
-import { logout } from "../Redux/Actions/UserActions"
 import "./Profil.css"
 import NavProfil from "./NavProfil";
 

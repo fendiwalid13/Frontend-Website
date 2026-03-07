@@ -1,4 +1,4 @@
-import { CURRENTUSER, FAIL, GETALLUSERS, LOGIN, LOGOUT, REGISTER } from "../ActionTypes/UserTypes"
+import { CURRENTUSER, GETALLUSERS, LOGIN, LOGOUT, REGISTER } from "../ActionTypes/UserTypes"
 import axios from 'axios'
 import { handleError } from "./ErrorActions"
 
@@ -15,15 +15,11 @@ export const register=(cordUser,navigate)=>async(dispatch)=>{
     )
     navigate('/Profil')
    } catch (error) {
-    // dispatch({
-    //     type:FAIL,
-    //     payload:error.response.data.errors
-    // })
 
-    // error.response.data.errors.forEach(element => {
-    //     dispatch(handleError(element.msg))
-    // });
-    console.log(error)
+    error.response.data.errors.forEach(element => {
+        dispatch(handleError(element.msg))
+    });
+
    }
 }
 
@@ -38,15 +34,11 @@ export const login=(cordUser,navigate)=>async(dispatch)=>{
     )
     navigate('/Profil')
    } catch (error) {
-    // dispatch({
-    //     type:FAIL,
-    //     payload:error.response.data.errors
-    // })
 
-    //   error.response.data.errors.forEach(element => {
-    //     dispatch(handleError(element.msg))
-    // });
-    console.log(error)
+      error.response.data.errors.forEach(element => {
+        dispatch(handleError(element.msg))
+    });
+  
    }
 }
 
@@ -65,10 +57,6 @@ export const currentUser=()=>async(dispatch)=>{
     )
 
    } catch (error) {
-    // dispatch({
-    //     type:FAIL,
-    //     payload:error.response.data.errors
-    // })
     console.log(error)
    }
 }

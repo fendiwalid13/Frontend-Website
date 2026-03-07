@@ -1,5 +1,4 @@
 import './Comment.css'
-import {useNavigate} from 'react-router-dom'
 import EditComment from './EditComment'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteComment } from '../Redux/Actions/CommentsActions'
@@ -7,7 +6,6 @@ import { deleteComment } from '../Redux/Actions/CommentsActions'
 const CardComment = ({el}) => {
    const user =useSelector(state=>state.UserReducer.user)
    const dispatch=useDispatch()
-  const navigate = useNavigate()
   const date =           new Date(el.createdAt).toLocaleString(   { day: "2-digit",
     month: "2-digit",
     year: "numeric",

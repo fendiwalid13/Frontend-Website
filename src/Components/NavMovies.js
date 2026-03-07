@@ -2,15 +2,12 @@ import './NavMovies.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, useNavigate } from 'react-router-dom';
-import {useDispatch, useSelector} from 'react-redux'
-import { logout } from "../Redux/Actions/UserActions"
+import { Link } from 'react-router-dom';
+import { useSelector} from 'react-redux'
 
 const NavUsers = () => {
   const token= localStorage.getItem('token')
   const user = useSelector(state=>state.UserReducer.user)
-  const navigate=useNavigate()
-  const dispatch=useDispatch()
   return (
       <Navbar className="custom-navbar" expand="lg" variant="dark">
         <Container>
@@ -25,7 +22,7 @@ const NavUsers = () => {
             <Nav.Link as={Link} to='/Profil'>Profil</Nav.Link>
             <Nav.Link as={Link} to='/AddMovie'>Add Movie</Nav.Link>
                   {
-                user.role == 'admin' && <Nav.Link as={Link} to='/ListUsers'>List of Users</Nav.Link>
+                user.role === 'admin' && <Nav.Link as={Link} to='/ListUsers'>List of Users</Nav.Link>
               }
 
               </>

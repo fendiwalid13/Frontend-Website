@@ -10,7 +10,6 @@ import { getAllRates } from '../Redux/Actions/RateActions';
 
 
 const CardMovie = ({el}) => {
-      const [value, setValue] = useState(0)
       const [show, setShow] = useState(false);
       const dispatch =useDispatch()
       useEffect(()=>{
@@ -20,11 +19,11 @@ const CardMovie = ({el}) => {
 
         const rates=useSelector(state=>state.RateReducer.rates)
 
-        const x = rates.filter((item,i,t)=> item.movieId._id == el._id).reduce(
+        const x = rates.filter((item,i,t)=> item.movieId._id ===el._id).reduce(
   (accumulator, currentValue) => accumulator + currentValue.rate,
   0,
 )
-const xlength = rates.filter((item,i,t)=> item.movieId._id == el._id)
+const xlength = rates.filter((item,i,t)=> item.movieId._id === el._id)
   return (
     <Card className="movie-card" style={{ width: "18rem", cursor: "pointer" }}>
       <Card.Img variant="top" src={el.photo} />

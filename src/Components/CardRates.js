@@ -1,12 +1,12 @@
 import Rating from '@mui/material/Rating';
 import EditRate from './EditRate';
-import { useDispatch , useSelector} from 'react-redux'
+import {  useSelector} from 'react-redux'
 import {useState} from 'react'
 
 const CardRates = ({el}) => {
      const user =useSelector(state=>state.UserReducer.user)
        const [showEdit, setShowEdit] = useState(false)
-     const dispatch=useDispatch()
+
   return (
     <div>
       {el.owner?._id === user?._id? (
