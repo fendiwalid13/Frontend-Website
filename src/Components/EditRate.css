@@ -1,0 +1,104 @@
+/* Glassmorphic Modal avec bordures visibles */
+.custom-modal {
+  background: rgba(20, 20, 30, 0.6) !important; /* semi-transparent */
+  backdrop-filter: blur(15px); /* flou derrière */
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* effet flottant */
+}
+
+/* Modal Content Transparent */
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+}
+
+.modal-footer {
+  border: none !important;
+}
+
+/* Modal Title  */
+.modal-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Modal Body */
+.modal-body {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Owner Name */
+.modal-owner {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Rating Stars */
+.MuiRating-root {
+  font-size: 2rem; /* plus grandes étoiles */
+  color: #ffb400; /* doré */
+}
+
+/* Footer Buttons alignés à droite */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cancel Button */
+.modal-footer .btn-secondary {
+  background: #444 !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: #666 !important;
+}
+
+/* Save/Edit Button */
+.modal-footer .btn-primary {
+  background: linear-gradient(45deg, #1e90ff, #0066ff) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 100, 255, 0.6);
+}
+
+/* Delete Button */
+.modal-footer .btn-danger {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.modal-footer .btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 70, 0, 0.6);
+}
+
+/* Close (X) Button */
+.btn-close {
+  filter: invert(1);
+}

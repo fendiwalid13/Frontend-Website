@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5d0d6, #e5e5e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.landing-card {
+  width: 95%;
+  max-width: 1300px;
+  background: #0f0f0f;
+  border-radius: 25px;
+  padding: 30px 50px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  color: white;
+}
+
+/* NAVBAR */
+.landing-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #e50914;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  color: #ccc;
+}
+
+.nav-links span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: white;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.trial-btn {
+  background: #e50914;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.trial-btn:hover {
+  background: #ff1f2d;
+}
+
+/* HERO CONTENT */
+.landing-content {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  gap: 40px;
+}
+
+.left {
+  flex: 1;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.avatars span {
+  width: 30px;
+  height: 30px;
+  background: #e50914;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: -10px;
+  border: 2px solid #0f0f0f;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.subtitle {
+  color: #bbb;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.primary-btn {
+  background: #e50914;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #ff1f2d;
+}
+
+.secondary-btn {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 40px;
+  color: #aaa;
+}
+
+.stats h3 {
+  color: white;
+  margin: 0;
+}
+
+/* RIGHT SIDE IMAGE */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}

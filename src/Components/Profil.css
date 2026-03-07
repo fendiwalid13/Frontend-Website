@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #12121c);
+    
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: rgba(20, 20, 30, 0.95);
+    padding: 30px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    color: #aaa;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links li:hover,
+.nav-links .active {
+    background: #6c5ce7;
+    color: white;
+}
+
+.logout {
+    margin-top: 50px;
+    color: #ff6b6b;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Card */
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #6c5ce7;
+}
+
+.profile-header h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-header p {
+    margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 18px;
+  margin-right: 15px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #6c5ce7, #a363ff);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover glow */
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(108, 92, 231, 0.55);
+}
+
+/* click effect */
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-delete {
+  margin-top: 18px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff4d4d, #ff1a1a); 
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 2px #ff1a1a, 0 6px 20px rgba(255, 77, 77, 0.35); /* red border + shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover glow */
+.btn-delete:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 77, 77, 0.55);
+}
+
+/* click effect */
+.btn-delete:active {
+  transform: scale(0.96);
+}
+
+
+
+.modal-owner {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.custom-modal {
+  background: rgba(20, 20, 30, 0.95) !important;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}

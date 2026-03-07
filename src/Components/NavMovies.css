@@ -1,0 +1,69 @@
+/* ===== Navbar Main Style ===== */
+.custom-navbar {
+  background: linear-gradient(90deg, #0f0f0f, #1a1a1a, #0f0f0f) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  padding: 12px 0;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+/* ===== Brand ===== */
+.custom-navbar .navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff4da6 !important;
+  transition: 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px #ff4da6;
+}
+
+/* ===== Nav Links ===== */
+.custom-navbar .nav-link {
+  color: #cccccc !important;
+  font-weight: 500;
+  margin-right: 15px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.custom-navbar .nav-link:hover {
+  color: #ff4da6 !important;
+}
+
+/* Animated underline effect */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ff0066, #6600ff);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Logout special style ===== */
+.custom-navbar .nav-link:last-child {
+  color: #ff4d4d !important;
+}
+
+.custom-navbar .nav-link:last-child:hover {
+  color: #ff0000 !important;
+  text-shadow: 0 0 5px red;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .custom-navbar .nav-link {
+    margin-right: 0;
+    padding: 8px 0;
+  }
+}

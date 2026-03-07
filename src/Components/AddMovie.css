@@ -1,0 +1,87 @@
+                                          /* ===== edit movie  ===== */
+
+/* ===== Page Background ===== */
+.edit-movie-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* ===== Form Container ===== */
+.edit-form {
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 20px;
+  width: 450px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2c2c2c;
+}
+
+/* ===== Labels ===== */
+.edit-form .form-label {
+  color: #ff4da6;
+  font-weight: 600;
+}
+
+/* ===== Inputs ===== */
+.edit-form .form-control {
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.edit-form .form-control:focus {
+  background-color: #2a2a2a;
+  color: white;
+  border-color: #ff0066;
+  box-shadow: 0 0 8px rgba(255, 0, 102, 0.5);
+}
+
+/* ===== Buttons ===== */
+.edit-btn-primary {
+  background: linear-gradient(45deg, #ff0066, #6600ff);
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn-primary:hover {
+  transform: scale(1.03);
+}
+
+.edit-btn-secondary {
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.edit-btn-secondary:hover {
+  background-color: #333;
+  color: white;
+}
+/* Placeholder color */
+.edit-form .form-control::placeholder {
+  color: #bbbbbb !important;
+  opacity: 1; /* important for Firefox */
+}
+
+/* For better visibility on focus */
+.edit-form .form-control:focus::placeholder {
+  color: #888888;
+}
+                                                /* ===== finish edit movie  ===== */

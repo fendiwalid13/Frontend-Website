@@ -1,0 +1,180 @@
+/* ===== Background ===== */
+.movie-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1f1f2e, #0d0d14 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* ===== Card Container ===== */
+.movie-card {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* ===== Title ===== */
+.movie-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.movie-title::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  background: #ff3c3c;
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* ===== Owner ===== */
+.movie-owner {
+  color: #b5b5b5;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* ===== Description ===== */
+.movie-description {
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 700px;
+}
+
+/* ===== Image ===== */
+.movie-image {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 25px;
+}
+
+/* ===== Buttons Section ===== */
+.movie-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+
+.movie-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+/* Back Button */
+.btn-back {
+  background: #444;
+  color: white;
+}
+
+.btn-back:hover {
+  background: #666;
+  transform: translateY(-3px);
+}
+
+/* Delete Button */
+.btn-delete {
+  background: linear-gradient(45deg, #ff3c3c, #ff0000);
+  color: white;
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+}
+
+.btn-delete:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Edit Button */
+.btn-edit {
+  background: linear-gradient(45deg, #1e90ff, #0066ff);
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 100, 255, 0.4);
+}
+
+.btn-edit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 100, 255, 0.6);
+}
+
+/* ===== Rating Section ===== */
+.rating-section {
+  margin-bottom: 30px;
+}
+
+.rating-section h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ===== Comments Section ===== */
+.comments-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Rates List Section ===== */
+.list-rates {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .movie-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .movie-title,
+  .movie-owner,
+  .movie-description,
+  .movie-buttons,
+  .rating-section,
+  .comments-section,
+  .list-rates {
+    grid-column: 2;
+  }
+
+  .movie-image {
+    grid-column: 1;
+    grid-row: 1 / span 8;
+    margin-bottom: 0;
+  }
+}
+
+
+.MuiRating-root {
+  color: #ffc107 !important; 
+}
+
+.MuiRating-iconEmpty {
+  color: rgba(255, 255, 255, 0.3) !important;
+}

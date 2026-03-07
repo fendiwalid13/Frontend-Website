@@ -1,0 +1,75 @@
+/* ================= USERS PAGE ================= */
+
+.users-container {
+  min-height: 80vh;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ================= USER CARD ================= */
+
+.user-card {
+  width: 280px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+  border: 1px solid #2c2c2c;
+}
+
+.user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 0, 150, 0.4);
+}
+
+/* ================= USER INFO ================= */
+
+.user-card h3 {
+  color: #ff4da6;
+  margin-bottom: 8px;
+}
+
+.user-card p {
+  color: #cccccc;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ================= DELETE BUTTON ================= */
+
+.user-card button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff0066, #6600ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user-card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #6600ff, #ff0066);
+}
+
+/* ================= EMPTY STATE ================= */
+
+.no-users {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-users h2 {
+  color: #ff4da6;
+  font-size: 26px;
+  letter-spacing: 1px;
+}

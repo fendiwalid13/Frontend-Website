@@ -1,0 +1,334 @@
+/* ===== Add comment part ===== */
+
+/* ===== Add Comment Container ===== */
+.add-comment-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* ===== Input Field ===== */
+.comment-input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.comment-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.comment-input:focus {
+  border: 1px solid #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+/* ===== Submit Button ===== */
+.comment-submit-btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #1e90ff, #0066ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.comment-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 100, 255, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .add-comment-container {
+    flex-direction: column;
+  }
+
+  .comment-submit-btn {
+    width: 100%;
+  }
+}
+
+                                            /* ===== finish Add comment part ===== */
+
+                                            /* ===== card comment part ===== */
+
+/* ===== Comment Card ===== */
+.comment-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.comment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Header ===== */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-owner {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.comment-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Message ===== */
+.comment-message {
+  font-size: 15px;
+  font-weight: 400;
+  color: #d6d6d6;
+  margin: 8px 0 12px 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* ===== Actions ===== */
+.comment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== Delete Button ===== */
+.comment-delete-btn {
+  background: linear-gradient(45deg, #ff3c3c, #ff0000);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+/* ===== Optional: Edit button if needed ===== */
+.comment-actions button {
+  background: linear-gradient(45deg, #1e90ff, #0066ff);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 100, 255, 0.5);
+}
+
+/* ===== Actions Container ===== */
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ===== Edit Button ===== */
+.comment-edit-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #1e90ff, #0066ff);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 100, 255, 0.5);
+}
+
+/* ===== Delete Button ===== */
+.comment-delete-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #ff3c3c, #ff0000);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comment-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
+}
+
+                                        /* ===== finish card comment part ===== */
+
+                                        /* ===== list comment part ===== */
+
+    
+/* ===== Comments Wrapper ===== */
+.comments-wrapper {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Title ===== */
+.comments-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comments-title span {
+  font-size: 16px;
+  color: #ff3c3c;
+  font-weight: 500;
+}
+
+/* ===== No Comments Message ===== */
+.no-comments {
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+/* ===== Comments List Container ===== */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+                                    /* ===== finish list comment part ===== */
+
+                                    
+                                    /* ===== edit comment part ===== */
+
+.custom-modal {
+  background: rgba(20, 20, 30, 0.95) !important;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+/* Modal Header */
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+}
+
+.modal-header,
+.modal-footer {
+  border: none !important;
+}
+
+/* Modal Title */
+.modal-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Modal Body */
+.modal-body {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* Input inside modal */
+.custom-modal input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.custom-modal input:focus {
+  border: 1px solid #1e90ff !important;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5) !important;
+}
+
+/* Close Button */
+.modal-footer .btn-secondary {
+  background: #444 !important;
+  border: none !important;
+  border-radius: 8px;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: #666 !important;
+}
+
+/* Edit Button */
+.modal-footer .btn-primary {
+  background: linear-gradient(45deg, #1e90ff, #0066ff) !important;
+  border: none !important;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 100, 255, 0.6);
+}
+
+
+.modal-owner {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Date styling */
+.modal-date {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Fix close (X) button visibility */
+.btn-close {
+  filter: invert(1);
+}
+
+                                    /* ===== finish edit comment part ===== */

@@ -1,0 +1,146 @@
+/* ===== Global Dark Background ===== */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Movies List Container ===== */
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
+
+/* ===== Movie Card ===== */
+.movie-card {
+  background-color: #1e1e1e !important;
+  border: 1px solid #2c2c2c !important;
+  border-radius: 15px !important;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 0, 150, 0.4);
+}
+
+/* ===== Movie Image ===== */
+.movie-card img {
+  height: 270px;
+  object-fit: cover;
+}
+
+/* ===== Card Body ===== */
+.movie-card .card-body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* ===== Title ===== */
+.movie-card .card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4da6;
+}
+
+/* ===== Text ===== */
+.movie-card .card-text {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+/* ===== Button ===== */
+.movie-card .btn {
+  background: linear-gradient(45deg, #ff0066, #6600ff);
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.movie-card .btn:hover {
+  background: linear-gradient(45deg, #6600ff, #ff0066);
+  transform: scale(1.05);
+}
+
+/* ===== Rating (MUI stars) ===== */
+.MuiRating-root {
+  margin-top: 10px;
+}
+
+.see-more-text {
+  color: #ff4da6;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+
+.see-more-text:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ================= EMPTY STATE DESIGN ================= */
+
+.no-movies {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.no-movies h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4da6;
+  letter-spacing: 1px;
+}
+
+/* Add Movie Button (Empty State) */
+.no-movies button {
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff0066, #6600ff);
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 0, 150, 0.4);
+}
+
+.no-movies button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 0, 150, 0.6);
+  background: linear-gradient(45deg, #6600ff, #ff0066);
+}
+
+/* Optional: make movies container take full height */
+.movies-container {
+  min-height: 80vh;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

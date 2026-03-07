@@ -1,0 +1,31 @@
+/* Container for all error messages */
+.error-container {
+  position: fixed;  /* Keeps errors visible even when scrolling */
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  z-index: 9999;    /* Ensures it stays above other content */
+}
+
+/* Each alert style */
+.error-container .alert {
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 14px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Optional slide-in animation from right */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

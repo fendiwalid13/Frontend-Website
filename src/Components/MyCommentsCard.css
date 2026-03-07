@@ -1,0 +1,124 @@
+/* ============================= */
+/* ===== Dashboard Layout ====== */
+/* ============================= */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1020, #1c1f4a, #0f1020);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Animated gradient background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* ===== Main Content Area ===== */
+/* ============================= */
+
+.main-content {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px; /* space between cards */
+}
+
+/* ============================= */
+/* ===== Section Title ========= */
+/* ============================= */
+
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #ff4c60;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+/* ============================= */
+/* ===== Comment Card ========== */
+/* ============================= */
+
+.my-comment-card {
+  width: 20rem;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover animation */
+.my-comment-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 76, 96, 0.4);
+}
+
+/* Card body */
+.my-comment-card .card-body {
+  padding: 25px;
+}
+
+/* Movie title */
+.my-comment-card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ff4c60;
+  transition: 0.3s;
+}
+
+.my-comment-card .card-title:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Comment text */
+.my-comment-card .card-text {
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* ===== Responsive Design ===== */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 30px 20px;
+  }
+
+  .my-comment-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
