@@ -34,7 +34,7 @@ function App() {
         <Route path='/ListMovies' element={<ListMovies/>}/> 
         <Route path='/EditMovie/:id' element={<EditMovie/>}/> 
         <Route path='/AddMovie' element={<AddMovie/>}/> 
-        <Route path='/MoviePage/:id' element={<MoviePage/>}/> 
+        <Route path='/MoviePage/:id' element={<PrivateRoute><MoviePage/></PrivateRoute>}/> 
         <Route path='/EditComment/:id' element={<EditComment/>}/>
         <Route path='/MyComments' element={<MyComments/>}/>
         <Route path='/MyMovies' element={<MyMovies/>}/>

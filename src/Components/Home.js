@@ -7,10 +7,10 @@ const Home = () => {
     <div className="page-wrapper">
       <div className="landing-card">
 
-        {/* HERO CONTENT */}
+  
         <div className="landing-content">
 
-          {/* LEFT SIDE */}
+ 
           <div className="left">
             <div className="users">
               <div className="avatars">
@@ -32,10 +32,10 @@ const Home = () => {
             </p>
 
             <div className="buttons">
-              <button nClick={navigate('/Register')} className="primary-btn">
+              <button onClick={()=>navigate('/Register')} className="primary-btn">
                 69 Day Free Trial
               </button>
-              <button onClick={navigate('/Register')} className="secondary-btn">
+              <button onClick={()=>navigate('/Register')} className="secondary-btn">
                 Create an Account
               </button>
             </div>

@@ -4,6 +4,16 @@ import { handleError } from "./ErrorActions"
 
 const apiUrl=process.env.REACT_APP_API_URL
 
+const handleAxiosErrors = (error, dispatch) => {
+  const errors = error.response?.data?.errors;
+
+  if (Array.isArray(errors)) {
+    errors.forEach((err) => dispatch(handleError(err.msg)));
+  } else {
+    dispatch(handleError(error.response?.data?.msg || error.message));
+  }
+};
+
 export const register=(cordUser,navigate)=>async(dispatch)=>{
    try {
     const res =await axios.post(`${apiUrl}/api/user/SignUp`, cordUser)
@@ -15,11 +25,7 @@ export const register=(cordUser,navigate)=>async(dispatch)=>{
     )
     navigate('/Profil')
    } catch (error) {
-
-    error.response.data.errors.forEach(element => {
-        dispatch(handleError(element.msg))
-    });
-
+     handleAxiosErrors(error, dispatch)
    }
 }
 
@@ -34,11 +40,7 @@ export const login=(cordUser,navigate)=>async(dispatch)=>{
     )
     navigate('/Profil')
    } catch (error) {
-
-      error.response.data.errors.forEach(element => {
-        dispatch(handleError(element.msg))
-    });
-  
+  handleAxiosErrors(error, dispatch);
    }
 }
 
